@@ -6,7 +6,7 @@ function sendEmail(to) {
       let transporter = createTransporter();
 
       let mailOptions = {
-        from: '"Hello world" <naoresponda.helloworld@gmail.com>',
+        from: '"Hello Email" <naoresponda.helloworld@gmail.com>',
         to,
         subject: "Este é um e-mail teste, por favor não responda",
         text: "O envio de e-mail está funcionando",
@@ -14,7 +14,7 @@ function sendEmail(to) {
           <p>Este e-mail é um teste de envio de e-mail com nodemailer utilizando protocolo OAuth2.</p>
         `
       }
-
+      
       let info = await transporter.sendMail(mailOptions)
 
       resolve(info);
@@ -39,12 +39,6 @@ function createTransporter() {
     secure: false,
     auth
   })
-}
-
-async function sendEmail(email) {
-  let transporter = createTransporter();
-
-  return transporter.sendMail(email);
 }
 
 module.exports = {
