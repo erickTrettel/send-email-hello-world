@@ -61,5 +61,5 @@ Copie o refresh token gerado e substitua no arquivo .env deste projeto.
 Para testar a API, siga a tabela abaixo contendo as requisições disponíveis.
 
 | URL           | Method        | Body            |
-| ------------- |:-------------:|----------------:|
+|:------------- |:--------------|:----------------|
 | /send_email   | POST          | *email: string* |
