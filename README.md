@@ -35,6 +35,23 @@ Volte ao menu **Credenciais** e clique em acesso a página para criar um novo ID
 
 ![Acessando a página criação de ID do cliente OAuth](img/img-5.PNG)
 
-Selecione **Aplicativo da web**, preencha o formulário mostrado com o nome da sua aplicação, e informe as URIs de redirecionamento autorizadas. Dentre elas informe o endereço: *https://developers.google.com/oauthplayground/* e a URL onde está hospedada a sua aplicação que irá fazer a requisição para o projeto do console google.
+Selecione **Aplicativo da web**, preencha o formulário mostrado com o nome da sua aplicação, e informe as URIs de redirecionamento autorizadas. Dentre elas informe o endereço: *https://developers.google.com/oauthplayground* e a URL onde está hospedada a sua aplicação que irá fazer a requisição para o projeto do console google. E clique em **Criar**.
 
+![Formlário de criação do ID do cliente OAuth](img/img-6.PNG)
 
+Copie as chaves ID do cliente e chave secreta do cliente mostradas e substitua no seu arquivo *.env* deste projeto.
+
+### 4. Pegando Refresh Token
+
+Acesse o [Google Developers Playground](https://developers.google.com/oauthplayground/) e clique no ícone de configurações. 
+
+Selecione a opção *Use your own OAuth credentials* e preencha com os seus tokens.
+
+![Opções de configuração do developers playground](img/img-7.PNG)
+
+Após preencher com seus tokens, adicione o escopo *https://mail.google.com/*. Faça login com sua conta de e-mail e permita as solicitações feitas pelo console do google.
+Clique em *Exchange authorization for tokens* e copie o Refresh token gerado.
+
+![Gerando refresh token](img/img-8.PNG)
+
+Copie o refresh token gerado e substitua no arquivo .env deste projeto.
