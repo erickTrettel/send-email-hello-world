@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 function sendEmail(to) {
   return new Promise(async (resolve, reject) => {
     try {
-      const transporter = createTransporter();
+      let transporter = createTransporter();
 
       let mailOptions = {
         from: '"Hello world" <naoresponda.helloworld@gmail.com>',
@@ -25,7 +25,7 @@ function sendEmail(to) {
 }
 
 function createTransporter() {
-  const auth = {
+  let auth = {
     type: 'oauth2',
     user: 'naoresponda.helloworld@gmail.com',
     clientId: process.env.GOOGLE_OAUTH2_CLIENT_ID,
