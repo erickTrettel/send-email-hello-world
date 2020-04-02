@@ -55,3 +55,11 @@ Clique em *Exchange authorization for tokens* e copie o Refresh token gerado.
 ![Gerando refresh token](img/img-8.PNG)
 
 Copie o refresh token gerado e substitua no arquivo .env deste projeto.
+
+### Testando a API
+
+Para testar a API, siga a tabela abaixo contendo as requisições disponíveis.
+
+| URL           | Method        | Body            |
+| ------------- |:-------------:|----------------:|
+| /send_email   | POST          | *email: string* |
